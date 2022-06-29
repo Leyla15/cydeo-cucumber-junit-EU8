@@ -10,7 +10,7 @@ import io.cucumber.java.en.Given;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
 
-public class FindingItem {
+public class FindingItem_StepDefinitions {
 
     NextBasePage nextBasePage = new NextBasePage();
 
