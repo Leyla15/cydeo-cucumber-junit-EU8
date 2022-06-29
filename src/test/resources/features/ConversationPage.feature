@@ -14,9 +14,8 @@ Feature: Conversation Page feature
   Conversation page is displayed
 
     Given <User> is on home page
-    When user clicks Menu button
-    Then user clicks Conversations button
-    And verify that user displayes Conversations
+    When user clicks 'Menu' button and 'Conversations' button
+    Then verify that user displayes 'Conversations'
 
     Examples:
 

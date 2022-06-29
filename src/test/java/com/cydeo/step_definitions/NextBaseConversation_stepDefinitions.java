@@ -22,16 +22,16 @@ public class NextBaseConversation_stepDefinitions {
 
     }
 
-    @When("user clicks Menu button")
-    public void user_clicks_menu_button1() {
-        nextBasePage.menuBtn.click();
-
-    }
-    @Then("user clicks Conversations button")
-    public void user_clicks_conversations_button1() {
-        nextBasePage.ConversationBtn.click();
-
-    }
+//    @When("user clicks Menu button")
+//    public void user_clicks_menu_button1() {
+//        nextBasePage.menuBtn.click();
+//
+//    }
+//    @And("user clicks Conversations button")
+//    public void user_clicks_conversations_button1() {
+//        nextBasePage.ConversationBtn.click();
+//
+//    }
 
 
    @Given("Helpdesk is on home page")
@@ -45,10 +45,25 @@ public class NextBaseConversation_stepDefinitions {
 
   }
 
-   @And("verify that user displayes Conversations")
-   public void verifyThatUserDisplayesConversations() {
+//   @And("verify that user displayes Conversations")
+//   public void verifyThatUserDisplayesConversations() {
+//
+//       Assert.assertTrue(nextBasePage.ConversationTitle.isDisplayed());
+//
+//   }
 
-       Assert.assertTrue(nextBasePage.ConversationTitle.isDisplayed());
 
-   }
+    @When("user clicks {string} button and {string} button")
+    public void userClicksMenuButtonAndConversationsButton(String menu, String conversation) {
+        nextBasePage.menuBtn.click();
+        nextBasePage.ConversationBtn.click();
+    }
+
+    @Then("verify that user displayes {string}")
+    public void verifyThatUserDisplayesConversations(String conversationPage) {
+        Assert.assertTrue(nextBasePage.ConversationTitle.isDisplayed());
+    }
+
+
+
 }

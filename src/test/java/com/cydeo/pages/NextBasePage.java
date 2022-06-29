@@ -34,6 +34,27 @@ public class NextBasePage {
   @FindBy(id = "pagetitle")
   public WebElement ConversationTitle;
 
+
+  @FindBy(xpath = "//input[@name='q']")
+  public WebElement searchBtn;
+
+
+  @FindBy(xpath = "//span[@class='header-search-icon header-search-icon-title']")
+  public WebElement searchSymbol;
+
+
+  @FindBy(id = "pagetitle")
+  public WebElement calendarPage;
+
+
+  @FindBy(xpath = "//span[@id='pagetitle']")
+  public WebElement drivePage;
+
+
+
+  @FindBy(xpath = "//span[@id='pagetitle']")
+  public WebElement mailPage;
+
   public void loginHelpdesk(){
    userName.sendKeys(ConfigurationReader.getProperty("helpdesk.username"));
     passWord.sendKeys(ConfigurationReader.getProperty("nextBase.password"));
