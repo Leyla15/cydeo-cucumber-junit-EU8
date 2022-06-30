@@ -7,6 +7,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 
 import java.security.Key;
@@ -25,7 +26,11 @@ public class Try_StepDefinitions {
     }
     @Then("verify that  {string} related  can be seen")
     public void verify_that_related_can_be_seen(String string) {
-        Assert.assertTrue(Driver.getDriver().getTitle().contains(string));
+     // Assert.assertTrue(Driver.getDriver().getTitle().contains(string));
+
+        Assert.assertTrue(Driver.getDriver().findElement(By.xpath("//*[@id=\"pagetitle\"]")).isDisplayed());
+
+
     }
 
 
