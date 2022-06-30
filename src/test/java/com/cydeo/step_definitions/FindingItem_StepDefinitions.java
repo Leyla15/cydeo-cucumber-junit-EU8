@@ -34,9 +34,9 @@ public class FindingItem_StepDefinitions {
 //        Assert.assertTrue(nextBasePage.calendarPage.isDisplayed());
 //        Assert.assertTrue(nextBasePage.drivePage.isDisplayed());
 
-        BrowserUtils.waitFor(2);
-        String actualTitle = Driver.getDriver().getTitle();
-        Assert.assertEquals(string,actualTitle);
+//        BrowserUtils.waitFor(2);
+//        String actualTitle = Driver.getDriver().getTitle();
+//        Assert.assertEquals(string,actualTitle);
 
 
     }
@@ -44,7 +44,6 @@ public class FindingItem_StepDefinitions {
     @Given("<User> is on home page")
     public void user_is_on_home_page() {
     }
-
 
 
 
