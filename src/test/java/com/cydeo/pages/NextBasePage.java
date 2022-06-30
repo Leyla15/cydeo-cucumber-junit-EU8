@@ -39,21 +39,25 @@ public class NextBasePage {
   public WebElement searchBtn;
 
 
-  @FindBy(xpath = "//span[@class='header-search-icon header-search-icon-title']")
-  public WebElement searchSymbol;
+//  @FindBy(xpath = "//span[@class='header-search-icon header-search-icon-title']")
+//  public WebElement searchSymbol;
+//
+//
+//  @FindBy(id = "pagetitle")
+//  public WebElement calendarPage;
+//
+//
+//  @FindBy(xpath = "//span[@id='pagetitle']")
+//  public WebElement drivePage;
+//
+//
+//
+//  @FindBy(xpath = "//span[@id='pagetitle']")
+//  public WebElement mailPage;
 
 
-  @FindBy(id = "pagetitle")
-  public WebElement calendarPage;
-
-
-  @FindBy(xpath = "//span[@id='pagetitle']")
-  public WebElement drivePage;
-
-
-
-  @FindBy(xpath = "//span[@id='pagetitle']")
-  public WebElement mailPage;
+  @FindBy(xpath = "//*[@id=\"feed-empty-wrap\"]/div")
+  public WebElement nothingFoundTitle;
 
   public void loginHelpdesk(){
    userName.sendKeys(ConfigurationReader.getProperty("helpdesk.username"));
