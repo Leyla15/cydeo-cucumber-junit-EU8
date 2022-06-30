@@ -2,6 +2,7 @@ package com.cydeo.step_definitions;
 
 import com.cydeo.pages.NextBasePage;
 import com.cydeo.pages.WikiSearchPage;
+import com.cydeo.utilities.BrowserUtils;
 import com.cydeo.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -23,6 +24,7 @@ public class Try_StepDefinitions {
     @When("user search for {string} and clicks enter")
     public void user_search_for_and_clicks_enter(String string) {
         nextBasePage.searchBtn.sendKeys(string + Keys.ENTER);
+        BrowserUtils.waitFor(2);
     }
     @Then("verify that  {string} related  can be seen")
     public void verify_that_related_can_be_seen(String string) {
