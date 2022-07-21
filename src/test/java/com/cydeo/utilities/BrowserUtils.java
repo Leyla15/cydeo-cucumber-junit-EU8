@@ -168,6 +168,15 @@ for given duration
         return elemTexts;
     }
 
+    public static List<WebElement> getElement(List<WebElement> list) {
+        List<WebElement> elemTexts = new ArrayList<>();
+        for (WebElement el : list) {
+            elemTexts.add(el);
+        }
+        return elemTexts;
+    }
+
+
     /**
      * Performs a pause
      *

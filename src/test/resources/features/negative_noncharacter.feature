@@ -8,9 +8,9 @@ Feature: Search feature
     Given user is on the next base login page
 
 
-  @negative
+  @NEXT-994
   Scenario Outline: Verify that users can't search with non-related characters
-  Searching without input
+
 
     Given <User> is on homepage
     And clicks search button with non-releated "41356251547471"

@@ -1,5 +1,6 @@
 package com.cydeo.step_definitions;
 
+import com.cydeo.pages.BasePagee;
 import com.cydeo.pages.NextBasePage;
 import com.cydeo.utilities.Driver;
 import io.cucumber.java.en.Given;
@@ -12,6 +13,21 @@ import org.openqa.selenium.Keys;
 public class Negative_NonRelatedCharacter_StepDefinitions {
 
     NextBasePage nextBasePage = new NextBasePage();
+
+    @Given("{string} is on homepage")
+    public void is_on_homepage(String string) {
+        switch (string.toLowerCase()){
+            case "hr":
+                BasePagee.loginAsHR();
+                break;
+            case "helpdesk":
+                BasePagee.loginAsHelpdesk();
+                break;
+            case "marketing":
+                BasePagee.loginAsMarketing();
+                break;
+        }
+    }
 
     @Given("clicks search button with non-releated {string}")
     public void clicks_search_button_with_non_releated(String string) {
