@@ -2,6 +2,7 @@ package com.cydeo.step_definitions;
 
 import com.cydeo.pages.NextBasePage;
 import com.cydeo.utilities.BrowserUtils;
+import com.cydeo.utilities.ConfigurationReader;
 import com.cydeo.utilities.Driver;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
@@ -41,7 +42,7 @@ public class MessageNegative_StepDefinitions {
 
     @When("user add {string}")
     public void user_add(String string) {
-        nextBasePage.videoURL.sendKeys("https://www.dailymotion.com/video/x8ckpok?playlist=x7g4o0");
+        nextBasePage.videoURL.sendKeys(ConfigurationReader.getProperty("daily.URL"));
         //  BrowserUtils.waitForVisibility(nextBasePage.videoURL,2);
         BrowserUtils.sleep(7);
     }

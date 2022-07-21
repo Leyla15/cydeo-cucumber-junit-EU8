@@ -16,7 +16,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/cydeo/step_definitions",
         dryRun = false,
-        tags = "@NEXT-1046Negative2",
+        tags = "@NEXT-1069",
         publish = false
 
 )

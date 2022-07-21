@@ -16,7 +16,7 @@ Feature: Sending Message feature
 
 
 
-  @NEXT-1040Negative
+  @NEXT-1067
   Scenario Outline: Verify that files and pictures are uploaded
 
     Given "<User>" is on homepage
@@ -35,7 +35,7 @@ Feature: Sending Message feature
       |Marketing|
 
 
-  @NEXT-1041Negative
+  @NEXT-1068
 
   Scenario Outline: User can not add users from non existing contact from contact lists.
 
@@ -79,7 +79,7 @@ Feature: Sending Message feature
 
 
 
-  @NEXT-1043Negative
+  @NEXT-1069
 
   Scenario Outline: User can not insert  video without vimeo or youtube video URL.
 
@@ -118,7 +118,7 @@ Feature: Sending Message feature
 
 
 
-  @NEXT-1046Negative
+  @NEXT-1070
 
   Scenario Outline: User can not send a message without add recipient.
 
@@ -138,7 +138,7 @@ Feature: Sending Message feature
       |Marketing|
 
 
-  @NEXT-1046Negative2
+  @NEXT-1071
 
   Scenario Outline: User can not send a message without add title.
 
