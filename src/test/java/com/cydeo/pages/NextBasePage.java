@@ -1,36 +1,41 @@
 package com.cydeo.pages;
 
-import com.cydeo.utilities.ConfigurationReader;
+import com.cydeo.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import com.cydeo.utilities.Driver;
+import org.openqa.selenium.support.ui.Select;
+
+import java.security.cert.X509Certificate;
+import java.util.ArrayList;
+import java.util.List;
 
 import java.util.List;
+import java.util.Properties;
 
 public class NextBasePage {
 
-  public NextBasePage(){
+  public NextBasePage() {
 
-      PageFactory.initElements(Driver.getDriver(),this);
+    PageFactory.initElements(Driver.getDriver(), this);
 
   }
 
   @FindBy(name = "USER_LOGIN")
-    public WebElement userName;
+  public WebElement userName;
 
-  @FindBy(name= "USER_PASSWORD")
-    public WebElement passWord;
+  @FindBy(name = "USER_PASSWORD")
+  public WebElement passWord;
 
   @FindBy(xpath = "//input[@class='login-btn']")
-    public WebElement loginBtn;
+  public WebElement loginBtn;
 
   @FindBy(xpath = "//span[@class='sitemap-menu-lines']")
-    public WebElement menuBtn;
+  public WebElement menuBtn;
 
   @FindBy(xpath = "//*[@id=\"sitemap-content\"]/div[1]/div/a[5]")
-    public WebElement ConversationBtn;
+  public WebElement ConversationBtn;
 
 
   @FindBy(id = "pagetitle")
@@ -39,6 +44,9 @@ public class NextBasePage {
 
   @FindBy(xpath = "//input[@name='q']")
   public WebElement searchBtn;
+
+
+
 
 
 //  @FindBy(xpath = "//span[@class='header-search-icon header-search-icon-title']")
@@ -61,25 +69,27 @@ public class NextBasePage {
   @FindBy(xpath = "//*[@id=\"feed-empty-wrap\"]/div")
   public WebElement nothingFoundTitle;
 
-  public void loginHelpdesk(){
-   userName.sendKeys(ConfigurationReader.getProperty("helpdesk.username"));
-    passWord.sendKeys(ConfigurationReader.getProperty("nextBase.password"));
-    loginBtn.click();
-  }
+  @FindBy(xpath = "(//span[normalize-space(text()) = 'Calendar'])[1]")
+  public WebElement calendar;
 
-  public void loginHR(){
-    userName.sendKeys(ConfigurationReader.getProperty("h1.username"));
-    passWord.sendKeys(ConfigurationReader.getProperty("nextBase.password"));
-    loginBtn.click();
-  }
-
-
-  public void loginMarketing(){
-    userName.sendKeys(ConfigurationReader.getProperty("marketing.username"));
-    passWord.sendKeys(ConfigurationReader.getProperty("nextBase.password"));
-    loginBtn.click();
-  }
-
+//    public void loginHelpdesk(){
+//        userName.sendKeys(ConfigurationReader.getProperty("helpdesk.username"));
+//        passWord.sendKeys(ConfigurationReader.getProperty("nextBase.password"));
+//        loginBtn.click();
+//    }
+//
+//    public void loginHR(){
+//        userName.sendKeys(ConfigurationReader.getProperty("h1.username"));
+//        passWord.sendKeys(ConfigurationReader.getProperty("nextBase.password"));
+//        loginBtn.click();
+//    }
+//
+//
+//    public void loginMarketing(){
+//        userName.sendKeys(ConfigurationReader.getProperty("marketing.username"));
+//        passWord.sendKeys(ConfigurationReader.getProperty("nextBase.password"));
+//        loginBtn.click();
+//    }
 
 
   ///////////////////////////////SPRINT 4 /////////////////////////////////////////////////
@@ -105,11 +115,16 @@ public class NextBasePage {
   @FindBy(xpath = "//input[@id=\"video_idPostFormLHE_blogPostForm-source\"]")
   public WebElement videoURL;
 
+
   @FindBy(className = "adm-btn-save")
   public WebElement videoSaveButton;
 
   @FindBy(xpath = "//span[@class='bxhtmled-video-error']")
   public WebElement videoUploadedError;
+
+  @FindBy(xpath = "/html/body/span/img")
+  public WebElement videoTitle;
+
 
 
   @FindBy(xpath = "//*[@id=\"bx-b-quote-blogPostForm\"]/span/i")
@@ -127,6 +142,7 @@ public class NextBasePage {
   @FindBy(xpath = "//span[@id='feed-add-post-destination-item']")
   public WebElement contact;
 
+
   @FindBy(xpath = "//a[text()='Employees and departments']")
   public WebElement employeeAndDepartmentButton;
 
@@ -137,6 +153,13 @@ public class NextBasePage {
 
   @FindBy(id ="feed-add-post-destination-input")
   public WebElement contactInput;
+
+//    @FindBy(xpath= "//div[@class=\"bx-finder-box-tabs\"]/a[3]")
+//    public WebElement employeeAndDepartmentButton;
+
+//    @FindBy(xpath = "//div[@class='bx-finder-company-department-employee-name']")
+//    public List<WebElement>oneContact;
+
 
 
   @FindBy(xpath = "//input[@id='linkidPostFormLHE_blogPostForm-text']")
@@ -157,8 +180,8 @@ public class NextBasePage {
   @FindBy(xpath = "/html/body/a")
   public WebElement cydeoLink;
 
-  //
-////"span[@id='bxid775003454']"
+
+  ////"span[@id='bxid775003454']"
   @FindBy(xpath = "/html/body/div[7]/div[1]/div/div[2]/table/tr/td/div[1]/span/span[2]/a[1]/div[3]/div")
   public WebElement oneOfMention;
 
@@ -166,8 +189,9 @@ public class NextBasePage {
   public WebElement oneOfMentionAssert;
 
 
-  @FindBy(xpath = "//span[@class='bx-finder-groupbox-content']/a")
-  public WebElement contactList;
+//    @FindBy(xpath = "//div[@class='bx-finder-box-item-t7-name']")
+//    public List<WebElement>oneOfMention;
+
 
 
 
@@ -205,4 +229,30 @@ public class NextBasePage {
   public WebElement missingLink;
 
 
+
+
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

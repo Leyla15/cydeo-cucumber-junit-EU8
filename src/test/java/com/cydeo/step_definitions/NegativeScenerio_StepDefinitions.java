@@ -15,10 +15,10 @@ public class NegativeScenerio_StepDefinitions {
     String currentURLAfter = "";
 
 
-    @Given("HR is on homepage")
-    public void hr_is_on_homepage() {
-        nextBasePage.loginHR();
-    }
+//    @Given("HR is on homepage")
+//    public void hr_is_on_homepage() {
+//        nextBasePage.loginHR();
+//    }
     @Given("clicks search button without providing input")
     public void clicks_search_button_without_providing_input() {
        // nextBasePage.searchBtn.click();
@@ -36,16 +36,16 @@ public class NegativeScenerio_StepDefinitions {
     }
 
 
-    @Given("Helpdesk is on homepage")
-    public void helpdesk_is_on_homepage() {
-      nextBasePage.loginHelpdesk();
-    }
-
-
-
-    @Given("Marketing is on homepage")
-    public void marketing_is_on_homepage() {
-     nextBasePage.loginMarketing();
-    }
+//    @Given("Helpdesk is on homepage")
+//    public void helpdesk_is_on_homepage() {
+//      nextBasePage.loginHelpdesk();
+//    }
+//
+//
+//
+//    @Given("Marketing is on homepage")
+//    public void marketing_is_on_homepage() {
+//     nextBasePage.loginMarketing();
+//    }
 
 }
