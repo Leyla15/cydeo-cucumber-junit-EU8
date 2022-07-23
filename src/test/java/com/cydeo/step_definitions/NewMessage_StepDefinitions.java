@@ -265,7 +265,7 @@ public class NewMessage_StepDefinitions {
     @Then("verify that user can send message")
     public void verifyThatUserCanSendMessage () {
 
-        Assert.assertTrue( Driver.getDriver().findElement(By.xpath("//div[@id=\"microoPostFormLHE_blogPostForm\"]/div/span[1]")).isDisplayed());
+        Assert.assertTrue(Driver.getDriver().findElement(By.xpath("//div[@id=\"microoPostFormLHE_blogPostForm\"]/div/span[1]")).isDisplayed());
 
 
 

@@ -19,9 +19,6 @@ public class NewNegativeMessage_StepDefinitions {
 
     NextBasePage nextBasePage = new NextBasePage();
 
-    ////////////////////UPLOADED FEATURE///////////////////////////
-
-
     @When("user uploaded anything except files and images")
     public void user_uploaded_folders() {
         Driver.getDriver().findElement(By.xpath("//input[@name='bxu_files[]']")).sendKeys("C:\\Users\\SDVISTANBUL\\Desktop\\SDETTTT");
