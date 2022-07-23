@@ -20,6 +20,7 @@ public class NewMessage_StepDefinitions {
 
 
 
+
     @When("user clicks {string} button")
     public void user_clicks_button(String string) {
         nextBasePage.messageButton.click();
@@ -94,7 +95,7 @@ public class NewMessage_StepDefinitions {
 
         // nextBasePage.oneContact.click();
 
-        List<WebElement> userName = BrowserUtils.getElement(nextBasePage.oneContact);
+        List<WebElement>userName = BrowserUtils.getElement(nextBasePage.oneContact);
 
         for (int i = 0; i < 3; i++) {
 
@@ -185,21 +186,6 @@ public class NewMessage_StepDefinitions {
 
     }
 
-//       BrowserUtils.sleep(2);
-//       nextBasePage.videoURL.sendKeys("https://vimeo.com/726713693");
-//     //  BrowserUtils.waitForVisibility(nextBasePage.videoURL,2);
-//       BrowserUtils.sleep(7);
-//    }
-//    @Then("verify that user can add video")
-//    public void verify_that_user_can_add_video() {
-//
-//        Driver.getDriver().switchTo().frame(nextBasePage.iframe);
-//
-//        Assert.assertTrue(nextBasePage.videoTitle.getAttribute("title").equals("Video"));
-//
-//        Driver.getDriver().switchTo().parentFrame();
-//
-//    }
 
 
     //////////////////QUOTE FEATURE////////////////////////////////////////////
@@ -267,35 +253,6 @@ public class NewMessage_StepDefinitions {
         Driver.getDriver().switchTo().parentFrame();
 
     }
-//
-//        List<WebElement>userName = BrowserUtils.getElement(nextBasePage.oneOfMention);
-//
-//        for (int i = 0; i < 3; i++) {
-//            userName.get(i).click();
-//            System.out.println(userName.get(i));
-//
-//        }
-//
-//
-//
-//
-//    @Then("verify that user can add mention")
-//    public void verify_that_user_can_add_mention() {
-//
-//
-//
-//        String expected = "helpdesk22@cybertekschool.com";
-//
-//        String actual = Driver.getDriver().findElement(By.xpath("//span[text()='helpdesk22@cybertekschool.com']")).getText();
-//
-//
-//
-//
-//
-//
-//   }
-//
-//
 
 
     //////////////////SEND MESSAGE FEATURE////////////////////////////////////////////
@@ -307,6 +264,10 @@ public class NewMessage_StepDefinitions {
 
     @Then("verify that user can send message")
     public void verifyThatUserCanSendMessage () {
+
         Assert.assertTrue( Driver.getDriver().findElement(By.xpath("//div[@id=\"microoPostFormLHE_blogPostForm\"]/div/span[1]")).isDisplayed());
+
+
+
     }
 }
